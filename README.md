@@ -26,8 +26,8 @@ All environments support language-conditioned task variants.
 ## Quick Start
 
 ```bash
-git clone https://github.com/Praneeth1636/mimicplay.git
-cd mimicplay
+git clone https://github.com/Praneeth1636/miniclip.git
+cd miniclip
 pip install -e ".[dev]"
 
 # Play a game
