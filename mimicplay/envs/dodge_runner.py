@@ -210,7 +210,7 @@ def _run_human_play() -> None:
             action = 2
         elif keys[pygame.K_RIGHT]:
             action = 3
-        else:
+        elif keys[pygame.K_SPACE]:
             action = 4
 
         obs, reward, terminated, truncated, _ = env.step(action)
