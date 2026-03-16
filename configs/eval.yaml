@@ -1,0 +1,4 @@
+env: grid_collector
+task: collect_all_coins
+episodes: 50
+

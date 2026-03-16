@@ -1,0 +1,17 @@
+env: grid_collector
+task: collect_all_coins
+model: bc
+encoder: resnet18
+demo_dir: demos/grid_collector/collect_all_coins
+frame_stack: 4
+batch_size: 64
+lr: 3e-4
+weight_decay: 1e-4
+epochs: 10
+augmentation: true
+scheduler: cosine
+eval_every: 5
+save_best: true
+wandb_project: mimicplay
+checkpoint_dir: checkpoints
+

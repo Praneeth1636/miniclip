@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mimicplay"
+version = "0.1.0"
+description = "Vision-language imitation learning platform for 2D Pygame environments."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Praneeth Kadem" }
+]
+dependencies = [
+  "pygame>=2.5.0",
+  "torch>=2.2.0",
+  "torchvision>=0.17.0",
+  "numpy>=1.26.0",
+  "h5py>=3.10.0",
+  "sentence-transformers>=3.0.0",
+  "click>=8.1.0",
+  "typer[all]>=0.12.0",
+  "pyyaml>=6.0.0",
+  "tqdm>=4.66.0",
+  "wandb>=0.17.0",
+  "opencv-python>=4.9.0",
+  "matplotlib>=3.8.0",
+  "seaborn>=0.13.0",
+  "streamlit>=1.33.0",
+  "scikit-learn>=1.4.0",
+  "mkdocs>=1.5.0",
+  "mkdocs-material>=9.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "pytest-cov>=4.1.0",
+  "mypy>=1.8.0",
+  "ruff>=0.3.0",
+]
+
+[project.scripts]
+mimicplay = "mimicplay.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mimicplay*"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+strict = true
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "B"]
+target-version = "py311"
