@@ -1,12 +1,23 @@
 .venv/
+venv/
 __pycache__/
 *.pyc
+*.egg-info/
 build/
 dist/
-*.egg-info/
-checkpoints/
+.eggs/
+
+# Data
 demos/
+checkpoints/
+eval_videos/
 wandb/
-.DS_Store
+
+# IDE
 .vscode/
 .idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
